@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import EmojiConfetti from "./ConfettiButton";
 import {
   Modal,
   ModalBody,
@@ -12,101 +9,209 @@ import {
   ModalTrigger,
 } from "./ui/animated-modal";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import ShineBorder from "./ui/shine-border";
-import { Gift } from "lucide-react";
+import { Gift, Heart, HeartIcon } from "lucide-react";
+import { ConfettiSideCannons } from "./SideCannons";
 
 export function AnimatedModalDemo() {
   const words = [
-    {
-      text: "Querida",
-      className: "font-bold",
-    },
-    {
-      text: "[Nombre de tu novia],",
-    },
-    {
-      text: "Hoy es un día",
-    },
-    {
-      text: "especial",
-      className: "text-pink-500 dark:text-pink-500",
-    },
-    {
-      text: "porque celebramos tu",
-    },
-    {
-      text: "vida",
-      className: "text-yellow-500 dark:text-yellow-500",
-    },
-    {
-      text: ",",
-    },
-    {
-      text: "tu",
-    },
-    {
-      text: "alegría",
-      className: "text-red-500 dark:text-red-500",
-    },
-    {
-      text: "y la luz que traes a mi mundo.",
-    },
-    {
-      text: "Quiero aprovechar este momento para decirte lo",
-    },
-    {
-      text: "importante",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-    {
-      text: "que eres para mí, lo afortunado que soy de tenerte a mi lado y lo mucho que te",
-    },
-    {
-      text: "amo.",
-      className: "text-red-500 dark:text-red-500 font-bold",
-    },
-    {
-      text: " Espero que este año te traiga aún más felicidad y sueños cumplidos.",
-    },
-    {
-      text: "Gracias por ser la persona tan",
-    },
-    {
-      text: "maravillosa",
-      className: "text-purple-500 dark:text-purple-500",
-    },
-    {
-      text: "que eres.",
-    },
-    {
-      text: " ¡Feliz cumpleaños!",
-    },
-    {
-      text: "Con todo mi amor,",
-    },
-    {
-      text: "[Tu nombre].",
-      className: "font-bold",
-    },
+    { text: "Leidy," },
+    { text: "lo" },
+    { text: "que" },
+    { text: "me" },
+    { text: "haces" },
+    { text: "sentir" },
+    { text: "no" },
+    { text: "tiene" },
+    { text: "nombre." },
+    { text: "Cada" },
+    { text: "vez" },
+    { text: "que" },
+    { text: "estoy" },
+    { text: "contigo," },
+    { text: "siento" },
+    { text: "que" },
+    { text: "soy" },
+    { text: "verdaderamente" },
+    { text: "yo." },
+    { text: "En" },
+    { text: "cada" },
+    { text: "momento" },
+    { text: "a" },
+    { text: "tu" },
+    { text: "lado," },
+    { text: "me" },
+    { text: "llenas" },
+    { text: "por" },
+    { text: "completo," },
+    { text: "y" },
+    { text: "con" },
+    { text: "cada" },
+    { text: "instante" },
+    { text: "me" },
+    { text: "enamoro" },
+    { text: "más" },
+    { text: "de" },
+    { text: "ti." },
+    { text: "Eres" },
+    { text: "tan" },
+    { text: "especial" },
+    { text: "para" },
+    { text: "mí" },
+    { text: "que" },
+    { text: "te" },
+    { text: "elegiría" },
+    { text: "una" },
+    { text: "y" },
+    { text: "otra" },
+    { text: "vez," },
+    { text: "en" },
+    { text: "esta" },
+    { text: "vida" },
+    { text: "y" },
+    { text: "en" },
+    { text: "cualquier" },
+    { text: "otra." },
+    { text: "Sin" },
+    { text: "pausa," },
+    { text: "sin" },
+    { text: "dudas," },
+    { text: "en" },
+    { text: "un" },
+    { text: "solo" },
+    { text: "latido," },
+    { text: "siempre" },
+    { text: "te" },
+    { text: "volvería" },
+    { text: "a" },
+    { text: "escoger." },
+    { text: "En" },
+    { text: "tu" },
+    { text: "presencia," },
+    { text: "todo" },
+    { text: "se" },
+    { text: "siente" },
+    { text: "bien." },
+    { text: "Quiero" },
+    { text: "escuchar" },
+    { text: "el" },
+    { text: "latido" },
+    { text: "de" },
+    { text: "tus" },
+    { text: "parpadeos," },
+    { text: "el" },
+    { text: "ritmo" },
+    { text: "de" },
+    { text: "tu" },
+    { text: "corazón," },
+    { text: "el" },
+    { text: "sonido" },
+    { text: "de" },
+    { text: "cada" },
+    { text: "uno" },
+    { text: "de" },
+    { text: "tus" },
+    { text: "movimientos..." },
+    { text: "y" },
+    { text: "el" },
+    { text: "sonido" },
+    { text: "de" },
+    { text: "tu" },
+    { text: "piel." },
+    { text: "Quiero" },
+    { text: "esforzarme" },
+    { text: "por" },
+    { text: "darte" },
+    { text: "todo" },
+    { text: "lo" },
+    { text: "bueno" },
+    { text: "que" },
+    { text: "mereces." },
+    { text: "No" },
+    { text: "importa" },
+    { text: "cuán" },
+    { text: "agotado" },
+    { text: "esté," },
+    { text: "nunca" },
+    { text: "me" },
+    { text: "cansaré" },
+    { text: "de" },
+    { text: "estar" },
+    { text: "para" },
+    { text: "ti." },
+    { text: "Incluso" },
+    { text: "en" },
+    { text: "los" },
+    { text: "días" },
+    { text: "más" },
+    { text: "difíciles," },
+    { text: "es" },
+    { text: "el" },
+    { text: "pensamiento" },
+    { text: "de" },
+    { text: "ti" },
+    { text: "lo" },
+    { text: "que" },
+    { text: "me" },
+    { text: "impulsa" },
+    { text: "a" },
+    { text: "seguir" },
+    { text: "adelante." },
+    { text: "Eres," },
+    { text: "simplemente," },
+    { text: "todo" },
+    { text: "lo" },
+    { text: "que" },
+    { text: "está" },
+    { text: "bien." },
+    { text: "Te" },
+    { text: "amo" },
+    { text: "tanto," },
+    { text: "en" },
+    { text: "serio." },
+    { text: "No" },
+    { text: "importa" },
+    { text: "cuántas" },
+    { text: "veces" },
+    { text: "te" },
+    { text: "lo" },
+    { text: "diga," },
+    { text: "siempre" },
+    { text: "te" },
+    { text: "amaré" },
+    { text: "más" },
+    { text: "que" },
+    { text: "eso." },
+    { text: "Significas" },
+    { text: "todo" },
+    { text: "para" },
+    { text: "mí." },
+    { text: "Te" },
+    { text: "amo," },
+    { text: "hoy" },
+    { text: "y" },
+    { text: "siempre." },
+    { text: "Con" },
+    { text: "amor," },
+    { text: "julio" },
+    { text: "jj." },
   ];
 
   return (
-    <div className="flex items-center justify-center ">
-      <Modal>
-        <ModalTrigger className=" dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <EmojiConfetti />
-        </ModalTrigger>
-        <ModalBody className="">
-          <ModalContent>
-            <TypewriterEffect words={words} />
-          </ModalContent>
-          <ModalFooter className="gap-4">
-            <button className="bg-black flex items-center justify-center gap-2 text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-              Siguiente <Gift />
-            </button>
-          </ModalFooter>
-        </ModalBody>
-      </Modal>
-    </div>
+    <Modal>
+      <ModalTrigger className=" dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+        <ConfettiSideCannons />
+      </ModalTrigger>
+      <ModalBody className="bg-black">
+        <HeartIcon className="text-white m-2" />
+        <ModalContent className="h-fit overflow-y-auto bg-blend-darken ">
+          <TypewriterEffect words={words} cursorClassName="hidden" />
+        </ModalContent>
+        <ModalFooter className="gap-4 bg-blend-darken">
+          <button className="bg-black flex items-center justify-center gap-2 text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+            Siguiente <Gift />
+          </button>
+        </ModalFooter>
+      </ModalBody>
+    </Modal>
   );
 }
