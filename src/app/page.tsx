@@ -17,7 +17,7 @@ export default function Home() {
     setIsMounted(true);
   }, []);
 
-  const words = "feli cumpleEeE LEIDYYYY";
+  const words = "feliz cumple, amor mio!!!!";
 
   return (
     <div className="h-screen w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
