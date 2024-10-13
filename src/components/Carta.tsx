@@ -9,8 +9,9 @@ import {
   ModalTrigger,
 } from "./ui/animated-modal";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import { Gift, Heart, HeartIcon } from "lucide-react";
+import { Gift, Heart, HeartIcon, MoveRight } from "lucide-react";
 import { ConfettiSideCannons } from "./SideCannons";
+import Link from "next/link";
 
 export function AnimatedModalDemo() {
   const words = [
@@ -207,9 +208,9 @@ export function AnimatedModalDemo() {
           <TypewriterEffect words={words} cursorClassName="hidden" />
         </ModalContent>
         <ModalFooter className="gap-4 bg-blend-darken">
-          <button className="bg-black flex items-center justify-center gap-2 text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-            Siguiente <Gift />
-          </button>
+          <Link href={'/memories'} className="bg-black flex items-center justify-center gap-2 text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+            <MoveRight />
+          </Link>
         </ModalFooter>
       </ModalBody>
     </Modal>

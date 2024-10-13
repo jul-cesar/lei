@@ -27,22 +27,13 @@ export default function Home() {
         className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
       >
         <div className="flex flex-col items-center justify-center lg:m-20 gap-4 lg:w-[550px] z-10">
-         
-            <TextGenerateEffect words={words} />
- 
+          <TextGenerateEffect words={words} />
 
           <AnimatedModalDemo />
-          <div className="relative  w-full px-4 max-w-2xl left-0 z-20">
-            <div className="flex items-center">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight p-2 text-white">
-                i wanna kiss kiss you.
-              </h4>
-              <HeartIcon className="text-white" />
-            </div>
-
+          <div className="relative  w-full px-4 max-w-2xl left-0  z-20">
             <iframe
               style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/track/4PwWESSlTwzvw9B7bmtTLS?utm_source=generator"
+              src="https://open.spotify.com/embed/track/1LzNfuep1bnAUR9skqdHCK?utm_source=generator"
               width="100%"
               height="100"
               frameBorder="0"
